@@ -3,13 +3,13 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#DDA0DD",
-        paddingTop: 20,
+        backgroundColor: "#fff",
+        paddingTop: 5,
     },
     label: {
         width: " 90%",
         marginTop: 20,
-        marginLeft: 18,
+        marginLeft: 22,
         fontSize: 18,
         color: "#9932CC"
     },
@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
         marginTop: 10,
         padding: 5,
         height: 50,
-        borderWidth: 3,
-        borderColor: "#9932CC",
-        borderRadius: 5,
+        borderBottomWidth: 2,
+        borderColor: "#DDA0DD",
         marginLeft: "auto",
         marginRight: "auto",
         backgroundColor: "#fff",
-        color: "#9932CC"
+        color: "#000",
+        fontSize: 18,
     },
     btnNewTask: {
         marginTop: 20,

@@ -23,6 +23,7 @@ export default function Task({ navigation }) {
 
 
     return (
+
         <View style={styles.container}>
             {/* <Text style={styles.label}>Pedidos de Hoje</Text> */}
             <FlatList
@@ -39,9 +40,9 @@ export default function Task({ navigation }) {
                             >
                                 <FontAwesome
                                     name="trash"
-                                    size={30}
-                                    color="#fff"
-                                >
+                                    size={40}
+                                    color="#9932CC"
+                                    style={styles.iconTask}>
                                 </FontAwesome>
                             </TouchableOpacity>
                             <Text
@@ -50,10 +51,41 @@ export default function Task({ navigation }) {
                                     navigation.navigate("Details", {
                                         id: item.id,
                                         description: item.description,
+                                        tamanho: item.tamanho,
+                                        frutas: item.frutas,
+                                        acompanhamentos: item.acompanhamentos,
+                                        congelados: item.congelados,
                                     })
                                 }
                             >
-                                {item.description}
+                                <View style={styles.box}>
+                                    <Text style={styles.ProdDescBold}>
+                                        Nome:
+                                        <Text style={styles.ProdDesc}> {item.description}</Text>
+                                    </Text>
+                                    <Text style={styles.ProdDescBold}>
+                                        Congelado Escolhido:
+                                        <Text style={styles.ProdDesc}> {item.congelado}</Text>
+                                    </Text>
+                                    <Text style={styles.ProdDescBold}>
+                                        Tamanho:
+                                        <Text style={styles.ProdDesc}> {item.tamanho}</Text>
+                                    </Text>
+                                    <TouchableOpacity
+                                        style={styles.BtnDet}
+                                        onPress={() =>
+                                            navigation.navigate("Details", {
+                                                id: item.id,
+                                                description: item.description,
+                                                tamanho: item.tamanho,
+                                                frutas: item.frutas,
+                                                acompanhamentos: item.acompanhamentos,
+                                                congelados: item.congelados,
+                                            })
+                                        }>
+                                        <Text style={styles.iconNewTask}>VER MAIS »</Text>
+                                    </TouchableOpacity>
+                                </View>
                             </Text>
 
                         </View>

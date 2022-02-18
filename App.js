@@ -16,8 +16,12 @@ export default function App() {
           component={Task}
           options={{
             title: 'Pedidos de Hoje',
-            headerTintColor: "#7b019f"
+            headerTintColor: "#7b019f",
+            headerStyle: {
+              backgroundColor: '#fff'
+            }
           }}
+
         />
         <Stack.Screen
           name="New Task"
